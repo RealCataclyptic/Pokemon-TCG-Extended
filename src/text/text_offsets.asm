@@ -2899,3 +2899,13 @@ TextOffsets::
 	textpointer GamblerDescription
 	textpointer RecycleName
 	textpointer RecycleDescription
+	textpointer DiscardedFromHandText
+	textpointer EveryoneMilledText
+	textpointer CantAttachEnergyToThisPKMNText
+	textpointer SwitchYesNoText
+	textpointer PokemonEvolvedIntoTyranitarText
+	textpointer ChooseATyranitarFromDeckText
+	textpointer ChooseATyranitarText
+	textpointer NoDamageDueToBenchGuardText
+	textpointer Choose1BasicEnergyCardFromHandText
+	textpointer CantUseNoDamageText

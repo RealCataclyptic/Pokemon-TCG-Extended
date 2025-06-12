@@ -16,7 +16,7 @@ BulbasaurCard:
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_NORMAL ; category
-	dw BulbasaurLeechSeedEffectCommands ; effect commands
+	dw Drain10EffectCommands  effect commands
 	db NONE ; flags 1
 	db HEAL_USER ; flags 2
 	db NONE ; flags 3
@@ -80,7 +80,7 @@ IvysaurCard:
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_NORMAL ; category
-	dw IvysaurPoisonPowderEffectCommands ; effect commands
+	dw InflictPoisonEffectCommands ; effect commands
 	db INFLICT_POISON ; flags 1
 	db NONE ; flags 2
 	db NONE ; flags 3
@@ -130,7 +130,7 @@ VenusaurLv64Card:
 	tx VenusaursMegaDrainDescriptionCont ; description (cont)
 	db 40 ; damage
 	db DAMAGE_NORMAL ; category
-	dw VenusaurMegaDrainEffectCommands ; effect commands
+	dw DrainHalfEffectCommands ; effect commands
 	db NONE ; flags 1
 	db HEAL_USER ; flags 2
 	db NONE ; flags 3
@@ -216,7 +216,7 @@ CaterpieCard:
 	dw NONE ; description (cont)
 	db 10 ; damage
 	db DAMAGE_NORMAL ; category
-	dw CaterpieStringShotEffectCommands ; effect commands
+	dw MayInflictParalysisEffectCommands ; effect commands
 	db INFLICT_PARALYSIS ; flags 1
 	db NONE ; flags 2
 	db NONE ; flags 3
@@ -266,7 +266,7 @@ MetapodCard:
 	dw NONE ; description (cont)
 	db 0 ; damage
 	db RESIDUAL ; category
-	dw MetapodStiffenEffectCommands ; effect commands
+	dw WithdrawEffectCommands ; effect commands
 	db NONE ; flags 1
 	db NULLIFY_OR_WEAKEN_ATTACK ; flags 2
 	db NONE ; flags 3
@@ -280,7 +280,7 @@ MetapodCard:
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_NORMAL ; category
-	dw MetapodStunSporeEffectCommands ; effect commands
+	dw MayInflictParalysisEffectCommands ; effect commands
 	db INFLICT_PARALYSIS ; flags 1
 	db NONE ; flags 2
 	db NONE ; flags 3
@@ -316,7 +316,7 @@ ButterfreeCard:
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_NORMAL ; category
-	dw ButterfreeWhirlwindEffectCommands ; effect commands
+	dw OpponentSwitchesActiveEffectCommands ; effect commands
 	db NONE ; flags 1
 	db SWITCH_OPPONENT_POKEMON ; flags 2
 	db NONE ; flags 3
