@@ -1248,7 +1248,7 @@ LeechSeedName:
 	done
 
 BulbasaursLeechSeedDescription:
-	text "Unless all damage from this attack"
+	text "Unless all damage from this attackt"
 	line "is prevented, you may remove 1"
 	line "damage counter from Bulbasaur."
 	done
@@ -1351,12 +1351,6 @@ EnergyTransDescription:
 
 SolarBeamName:
 	text "Solarbeam"
-	done
-
-VenusaurLv67Description:
-	text "This plant blooms when it is"
-	line "absorbing solar energy. It stays on"
-	line "the move to seek sunlight."
 	done
 
 CaterpieName:

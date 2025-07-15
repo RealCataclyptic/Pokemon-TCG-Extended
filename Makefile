@@ -1,4 +1,4 @@
-rom := poketcg_ext.gbc
+rom := tcg-advanced.gbc
 
 rom_obj := \
 	src/main.o \

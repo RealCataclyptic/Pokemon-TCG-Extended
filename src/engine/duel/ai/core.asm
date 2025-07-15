@@ -201,9 +201,9 @@ CheckIfEnergyIsUseful:
 	jr z, .check_energy
 
 	ld bc, WATER_ENERGY
-	cphl SURFING_PIKACHU_LV13
+	cphl PIKACHU
 	jr z, .check_energy
-	cphl SURFING_PIKACHU_ALT_LV13
+	cphl PIKACHU
 	jr z, .check_energy
 
 	cphl EEVEE
@@ -1931,15 +1931,15 @@ AISelectSpecialAttackParameters:
 	ld a, DUELVARS_ARENA_CARD
 	call GetTurnDuelistVariable
 	call GetCardIDFromDeckIndex
-	cp16 MEW_LV23
+	cp16 MEW
 	jr z, .DevolutionBeam
-	cp16 MEWTWO_ALT_LV60
+	cp16 MEWTWO
 	jr z, .EnergyAbsorption
-	cp16 MEWTWO_LV60
+	cp16 MEWTWO
 	jr z, .EnergyAbsorption
 	cp16 EXEGGUTOR
 	jr z, .Teleport
-	cp16 ELECTRODE_LV35
+	cp16 ELECTRODE
 	jr z, .EnergySpike
 	; fallthrough
 

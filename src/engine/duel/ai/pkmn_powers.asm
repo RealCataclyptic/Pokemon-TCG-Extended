@@ -18,7 +18,7 @@ HandleAIEnergyTrans:
 	dec a
 	ret z ; return if no Bench cards
 
-	ld de, VENUSAUR_LV67
+	ld de, VENUSAUR
 	call CountTurnDuelistPokemonWithActivePkmnPower
 	ret nc ; return if no VenusaurLv67 found in own Play Area
 
@@ -59,7 +59,7 @@ HandleAIEnergyTrans:
 	call GetTurnDuelistVariable
 	ldh [hTempCardIndex_ff9f], a
 	call GetCardIDFromDeckIndex
-	cp16 VENUSAUR_LV67
+	cp16 VENUSAUR
 	jr z, .use_pkmn_power
 
 	ld a, b
@@ -297,7 +297,7 @@ AIEnergyTransTransferEnergyToBench:
 	ldh [hTempCardIndex_ff9f], a
 	ld [wAIVenusaurLv67DeckIndex], a
 	call GetCardIDFromDeckIndex
-	cp16 VENUSAUR_LV67
+	cp16 VENUSAUR
 	jr z, .use_pkmn_power
 
 	ld a, b

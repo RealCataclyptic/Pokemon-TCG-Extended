@@ -61,7 +61,7 @@ AIProcessAttacks:
 	jr .attack_chosen
 
 .no_pluspower
-; if Player is running MewtwoLv53 mill deck,
+; if Player is running Mewtwo mill deck,
 ; skip attack if Barrier counter is 0.
 	ld a, [wAIBarrierFlagCounter]
 	cp AI_MEWTWO_MILL + 0
@@ -362,13 +362,13 @@ GetAIScoreOfAttack:
 	ld a, DUELVARS_ARENA_CARD
 	call GetTurnDuelistVariable
 	call GetCardIDFromDeckIndex
-	cp16 MAGNEMITE_LV13
+	cp16 MAGNEMITE
 	jr z, .magnemite1
 	ld b, 10 ; bench damage
 .magnemite1
 	ld a, 10
 	add b
-	ld b, a ; 20 bench damage if not MagnemiteLv13
+	ld b, a ; 20 bench damage if not MagnemiteCardLv13
 
 ; if this attack causes player to win the duel by
 ; knocking out own Pokémon, dismiss attack.
@@ -402,7 +402,7 @@ GetAIScoreOfAttack:
 	call GetCardIDFromDeckIndex
 	cp16 CHANSEY
 	jr z, .chansey
-	cp16 MAGNEMITE_LV13
+	cp16 MAGNEMITE
 	jr z, .magnemite1_or_weezing
 	cp16 WEEZING
 	jr z, .magnemite1_or_weezing

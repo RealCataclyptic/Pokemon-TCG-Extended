@@ -1457,50 +1457,50 @@ ScriptCommand_PickChallengeCupPrizeCard:
 	jp IncreaseScriptPointerBy1
 
 ChallengeCupPrizeCards:
-	dw MEWTWO_LV60
+	dw MEWTWO
 	tx MewtwoTradeCardName
 
-	dw MEW_LV8
+	dw MEW
 	tx MewTradeCardName
 
-	dw ARCANINE_LV34
+	dw ARCANINE
 	tx ArcanineTradeCardName
 
-	dw PIKACHU_LV16
+	dw PIKACHU
 	tx PikachuTradeCardName
 
-	dw PIKACHU_ALT_LV16
+	dw PIKACHU
 	tx PikachuTradeCardName
 
-	dw SURFING_PIKACHU_LV13
-	tx SurfingPikachuTradeCardName
+	dw PIKACHU
+	tx PikachuTradeCardName
 
-	dw SURFING_PIKACHU_ALT_LV13
-	tx SurfingPikachuTradeCardName
+	dw PIKACHU
+	tx PikachuTradeCardName
 
-	dw ELECTABUZZ_LV20
+	dw ELECTABUZZ
 	tx ElectabuzzTradeCardName
 
-	dw SLOWPOKE_LV9
+	dw SLOWPOKE
 	tx SlowpokeTradeCardName
 
-	dw MEWTWO_ALT_LV60
+	dw MEWTWO
 	tx MewtwoTradeCardName
 
-	dw MEWTWO_LV60
+	dw MEWTWO
 	tx MewtwoTradeCardName
 
-	dw MEW_LV8
+	dw MEW
 	tx MewTradeCardName
 
-	dw JIGGLYPUFF_LV12
+	dw JIGGLYPUFF
 	tx JigglypuffTradeCardName
 
 	dw SUPER_ENERGY_RETRIEVAL
 	tx SuperEnergyRetrievalTradeCardName
 
-	dw FLYING_PIKACHU
-	tx FlyingPikachuTradeCardName
+	dw PIKACHU
+	tx PikachuTradeCardName
 .end
 
 ScriptCommand_PickLegendaryCard:
@@ -1533,16 +1533,16 @@ ScriptCommand_PickLegendaryCard:
 	jr ScriptCommand_PickChallengeCupPrizeCard.get_card_from_list
 
 LegendaryCards:
-	dw ZAPDOS_LV68
+	dw ZAPDOS
 	tx ZapdosLegendaryCardName
 
-	dw MOLTRES_LV37
+	dw MOLTRES
 	tx MoltresLegendaryCardName
 
-	dw ARTICUNO_LV37
+	dw ARTICUNO
 	tx ArticunoLegendaryCardName
 
-	dw DRAGONITE_LV41
+	dw DRAGONITE
 	tx DragoniteLegendaryCardName
 
 LegendaryCardEvents:

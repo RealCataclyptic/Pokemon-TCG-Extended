@@ -146,6 +146,8 @@ INCLUDE "data/card_pointers.asm"
 
 SECTION "Cards", ROMX
 INCLUDE "data/cards.asm"
+SECTION "Cards2", ROMX
+INCLUDE "data/cards2.asm"
 
 SECTION "Bank 20", ROMX
 INCLUDE "engine/bank20.asm"

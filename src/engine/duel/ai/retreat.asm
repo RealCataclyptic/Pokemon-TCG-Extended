@@ -685,7 +685,7 @@ AIDecideBenchPokemonToSwitchTo:
 
 ; raise AI score if
 ;	- is a Mr Mime OR
-;	- is a MewLv8 and defending card is not basic stage
+;	- is a Mew and defending card is not basic stage
 	ldh a, [hTempPlayAreaLocation_ff9d]
 	add DUELVARS_ARENA_CARD
 	call GetTurnDuelistVariable
@@ -693,7 +693,7 @@ AIDecideBenchPokemonToSwitchTo:
 	ld hl, wLoadedCard1ID
 	cphl MR_MIME
 	jr z, .raise_score
-	cphl MEW_LV8
+	cphl MEW
 	jr nz, .check_if_has_bench_utility
 	ld a, DUELVARS_ARENA_CARD
 	call GetNonTurnDuelistVariable

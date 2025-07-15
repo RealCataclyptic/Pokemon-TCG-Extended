@@ -27,9 +27,9 @@ AIActionTable_WondersOfScience:
 	jp AIPickPrizeCards
 
 .list_arena
-	dw MEWTWO_LV53
-	dw MEWTWO_ALT_LV60
-	dw MEWTWO_LV60
+	dw MEWTWO
+	dw MEWTWO
+	dw MEWTWO
 	dw GRIMER
 	dw KOFFING
 	dw PORYGON
@@ -38,9 +38,9 @@ AIActionTable_WondersOfScience:
 .list_bench
 	dw GRIMER
 	dw KOFFING
-	dw MEWTWO_ALT_LV60
-	dw MEWTWO_LV60
-	dw MEWTWO_LV53
+	dw MEWTWO
+	dw MEWTWO
+	dw MEWTWO
 	dw PORYGON
 	dw NULL
 
@@ -52,9 +52,9 @@ AIActionTable_WondersOfScience:
 	ai_energy MUK,             4, +0
 	ai_energy KOFFING,         2, +0
 	ai_energy WEEZING,         3, +0
-	ai_energy MEWTWO_LV53,     2, -1
-	ai_energy MEWTWO_ALT_LV60, 2, -1
-	ai_energy MEWTWO_LV60,     2, -1
+	ai_energy MEWTWO,     2, -1
+	ai_energy MEWTWO, 2, -1
+	ai_energy MEWTWO,     2, -1
 	ai_energy PORYGON,         2, -1
 	dw NULL
 

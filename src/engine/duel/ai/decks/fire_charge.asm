@@ -27,35 +27,35 @@ AIActionTable_FireCharge:
 	jp AIPickPrizeCards
 
 .list_arena
-	dw JIGGLYPUFF_LV14
+	dw JIGGLYPUFF
 	dw CHANSEY
 	dw TAUROS
-	dw MAGMAR_LV24
-	dw JIGGLYPUFF_LV12
+	dw MAGMAR
+	dw JIGGLYPUFF
 	dw GROWLITHE
 	dw NULL
 
 .list_bench
-	dw JIGGLYPUFF_LV14
+	dw JIGGLYPUFF
 	dw CHANSEY
 	dw GROWLITHE
-	dw MAGMAR_LV24
-	dw JIGGLYPUFF_LV12
+	dw MAGMAR
+	dw JIGGLYPUFF
 	dw TAUROS
 	dw NULL
 
 .list_retreat
-	ai_retreat JIGGLYPUFF_LV12, -1
+	ai_retreat JIGGLYPUFF, -1
 	ai_retreat CHANSEY,         -1
 	ai_retreat GROWLITHE,       -1
 	dw NULL
 
 .list_energy
 	ai_energy GROWLITHE,       3, +0
-	ai_energy ARCANINE_LV45,   4, +0
-	ai_energy MAGMAR_LV24,     3, +0
-	ai_energy JIGGLYPUFF_LV12, 3, +0
-	ai_energy JIGGLYPUFF_LV14, 2, +0
+	ai_energy ARCANINE,   4, +0
+	ai_energy MAGMAR,     3, +0
+	ai_energy JIGGLYPUFF, 3, +0
+	ai_energy JIGGLYPUFF, 2, +0
 	ai_energy WIGGLYTUFF,      3, +0
 	ai_energy CHANSEY,         4, +0
 	ai_energy TAUROS,          3, +0

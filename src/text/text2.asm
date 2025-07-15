@@ -796,7 +796,7 @@ ReceivedLegendaryCardText:
 	line "card <RAMTEXT>!"
 	done
 
-ReceivedPromotionalFlyingPikachuText:
+ReceivedPromotionalPikachuText:
 	text "<RAMNAME> received a Promotinal"
 	line "card Flyin' Pikachu!"
 	done

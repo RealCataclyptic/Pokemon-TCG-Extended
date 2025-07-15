@@ -27,42 +27,42 @@ AIActionTable_LegendaryZapdos:
 	jp AIPickPrizeCards
 
 .list_arena
-	dw ELECTABUZZ_LV35
+	dw ELECTABUZZ
 	dw VOLTORB
 	dw EEVEE
-	dw ZAPDOS_LV40
-	dw ZAPDOS_LV64
-	dw ZAPDOS_LV68
+	dw ZAPDOS
+	dw ZAPDOS
+	dw ZAPDOS
 	dw NULL
 
 .list_bench
-	dw ZAPDOS_LV64
-	dw ZAPDOS_LV40
+	dw ZAPDOS
+	dw ZAPDOS
 	dw EEVEE
 	dw VOLTORB
-	dw ELECTABUZZ_LV35
+	dw ELECTABUZZ
 	dw NULL
 
 .list_retreat
 	ai_retreat EEVEE,           -5
 	ai_retreat VOLTORB,         -5
-	ai_retreat ELECTABUZZ_LV35, -5
+	ai_retreat ELECTABUZZ, -5
 	dw NULL
 
 .list_energy
 	ai_energy VOLTORB,         1, -1
-	ai_energy ELECTRODE_LV35,  3, +0
-	ai_energy ELECTABUZZ_LV35, 2, -1
-	ai_energy JOLTEON_LV29,    3, +1
-	ai_energy ZAPDOS_LV40,     4, +2
-	ai_energy ZAPDOS_LV64,     4, +2
-	ai_energy ZAPDOS_LV68,     3, +1
+	ai_energy ELECTRODE,  3, +0
+	ai_energy ELECTABUZZ, 2, -1
+	ai_energy JOLTEON,    3, +1
+	ai_energy ZAPDOS,     4, +2
+	ai_energy ZAPDOS,     4, +2
+	ai_energy ZAPDOS,     3, +1
 	ai_energy EEVEE,           3, +0
 	dw NULL
 
 .list_prize
 	dw GAMBLER
-	dw ZAPDOS_LV68
+	dw ZAPDOS
 	dw NULL
 
 .store_list_pointers
@@ -97,7 +97,7 @@ AIDoTurn_LegendaryZapdos:
 	or a
 	jr nz, .skip_energy_attach
 
-; if Arena card is Voltorb and there's ElectrodeLv35 in hand,
+; if Arena card is Voltorb and there's Electrode in hand,
 ; or if it's Electabuzz, try attaching Energy card
 ; to the Arena card if it doesn't have any energy attached.
 ; Otherwise if Energy card is not needed,
@@ -107,12 +107,12 @@ AIDoTurn_LegendaryZapdos:
 	call GetCardIDFromDeckIndex
 	cp16 VOLTORB
 	jr nz, .check_electabuzz
-	ld de, ELECTRODE_LV35
+	ld de, ELECTRODE
 	call LookForCardIDInHandList_Bank5
 	jr nc, .attach_normally
 	jr .voltorb_or_electabuzz
 .check_electabuzz
-	cp16 ELECTABUZZ_LV35
+	cp16 ELECTABUZZ
 	jr nz, .attach_normally
 
 .voltorb_or_electabuzz

@@ -1688,14 +1688,6 @@ ArcanineTradeCardName:
 	text "<Lv>34 ARCANINE"
 	done
 
-PikachuTradeCardName:
-	text "<Lv>16 PIKACHU"
-	done
-
-SurfingPikachuTradeCardName:
-	text "<Lv>13 SURFING PIKACHU"
-	done
-
 ElectabuzzTradeCardName:
 	text "<Lv>20 ELECTABUZZ"
 	done
@@ -1728,8 +1720,8 @@ SuperEnergyRetrievalTradeCardName:
 	text "Super Energy Retrieval"
 	done
 
-FlyingPikachuTradeCardName:
-	text "<Lv>12 FLYING PIKACHU"
+PikachuTradeCardName:
+	text "PIKACHU"
 	done
 
 LightningAndFireDeckChoiceText:

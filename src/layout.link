@@ -104,6 +104,8 @@ ROMX $18
 	"Text 12"
 ROMX $19
 	"Text 13"
+ROMX $1a
+	"Text 14"
 ROMX $1d
 	"Gfx 1"
 ROMX $1e
@@ -165,6 +167,30 @@ ROMX $3b
 	"Card Gfx 11"
 ROMX $3c
 	"Card Gfx 12"
+ROMX $40
+	"Card Gfx 13"
+ROMX $41
+	"Card Gfx 14"
+ROMX $42
+	"Card Gfx 15"
+ROMX $43
+	"Card Gfx 16"
+ROMX $44
+	"Card Gfx 17"
+ROMX $45
+	"Card Gfx 18"
+ROMX $46
+	"Card Gfx 19"
+ROMX $47
+	"Card Gfx 20"
+ROMX $48
+	"Card Gfx 21"
+ROMX $49
+	"Card Gfx 22"
+ROMX $4a
+	"Card Gfx 23"
+;ROMX $4b
+	;"Card Gfx 24"
 ROMX $3d
 	"Audio 1"
 ROMX $3e

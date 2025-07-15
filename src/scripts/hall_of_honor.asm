@@ -18,10 +18,10 @@ Script_fbf1:
 	jump_if_event_true EVENT_RECEIVED_LEGENDARY_CARDS, .ows_fc10
 	max_out_event_value EVENT_RECEIVED_LEGENDARY_CARDS
 	print_text Text05b8
-	give_card ZAPDOS_LV68
-	give_card MOLTRES_LV37
-	give_card ARTICUNO_LV37
-	give_card DRAGONITE_LV41
+	give_card ZAPDOS
+	give_card MOLTRES
+	give_card ARTICUNO
+	give_card DRAGONITE
 	show_card_received_screen $ffff
 .ows_fc05
 	flash_screen 0

@@ -652,7 +652,7 @@ wNumberPrizeCardsToTake:: ; ccc8
 wConfusionAttackCheckWasUnsuccessful:: ; ccc9
 	ds $1
 
-; used to store card indices of all stages, in order, of a Play Area Pokémon
+; used to store card indices of all stages, in order, of a Play Area Pok??mon
 wAllStagesIndices:: ; ccca
 	ds $3
 
@@ -889,10 +889,10 @@ wAIPeekedPrizes:: ; cda5
 wAIPokedexCounter:: ; cda6
 	ds $1
 
-; variable to keep track of MewtwoLv53's Barrier usage during Player' turn.
-; AI_MEWTWO_MILL set means Player is running MewtwoLv53 mill deck.
+; variable to keep track of Mewtwo's Barrier usage during Player' turn.
+; AI_MEWTWO_MILL set means Player is running Mewtwo mill deck.
 ; 	- when flag is not set, this counts how many turns in a row
-;	  Player used MewtwoLv53's Barrier attack;
+;	  Player used Mewtwo's Barrier attack;
 ;	- when flag is set, this counts how many turns in a row
 ;	  Player has NOT used Barrier attack.
 wAIBarrierFlagCounter:: ; cda7
@@ -988,15 +988,15 @@ ENDU
 
 	ds $a
 
-; information about the defending Pokémon and
+; information about the defending Pok??mon and
 ; the prize card count on both sides for AI:
-; player's active Pokémon color
+; player's active Pok??mon color
 wAIPlayerColor:: ; cdcf
 	ds $1
-; player's active Pokémon weakness
+; player's active Pok??mon weakness
 wAIPlayerWeakness:: ; cdd0
 	ds $1
-; player's active Pokémon resistance
+; player's active Pok??mon resistance
 wAIPlayerResistance:: ; cdd1
 	ds $1
 ; player's prize count
@@ -1040,7 +1040,7 @@ wAIExecuteProcessedAttack:: ; cdd9
 	ds $1
 
 ; flags used by AI for retreat logic
-; if bit 0 set, then it means the current Pokémon
+; if bit 0 set, then it means the current Pok??mon
 ; can KO the defending card with one of its attacks
 ; if bit 7 is set, then it means the switch is due
 ; to the effect of an attack (not Pkmn Power)
@@ -1069,7 +1069,7 @@ wPlayAreaEnergyAIScore:: ; cde4
 wSamePokemonEnergyScore:: ; cdea
 	ds MAX_PLAY_AREA_POKEMON
 
-; whether AI cannot inflict damage on player's active Pokémon
+; whether AI cannot inflict damage on player's active Pok??mon
 ; (due to No Damage or Effect substatus).
 ;	$00 = can damage
 ;	$01 = can't damage
@@ -1088,12 +1088,12 @@ wTempAI2::
 	ds $2
 
 ; used to temporarily store the card deck index
-; while AI is deciding whether to evolve Pokémon
-; or deciding whether to play Pokémon card from hand
+; while AI is deciding whether to evolve Pok??mon
+; or deciding whether to play Pok??mon card from hand
 wTempAIPokemonCard:: ; cdf3
 	ds $1
 
-; used for AI to store whether this card can KO defending Pokémon
+; used for AI to store whether this card can KO defending Pok??mon
 ; $00 = can't KO
 ; $01 = can KO
 wCurCardCanKO:: ; cdf4
@@ -2204,7 +2204,7 @@ wTotalNumCardsCollected:: ; d3cd
 	ds $2
 
 ; total number of cards to be collected
-; doesn't count the Phantom cards (VenusaurLv64 and MewLv15)
+; doesn't count the Phantom cards (VenusaurLv64 and Mew)
 ; unless they have already been collected
 wTotalNumCardsToCollect:: ; d3ce
 	ds $2
