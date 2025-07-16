@@ -360,10 +360,6 @@ OmanyteWaterGunEffectCommands:
 	dbw EFFECTCMDTYPE_AI, OmanyteWaterGunEffect
 	db  $00
 
-WartortleWithdrawEffectCommands:
-	dbw EFFECTCMDTYPE_BEFORE_DAMAGE, WithdrawEffect
-	db  $00
-
 BlastoiseRainDanceEffectCommands:
 	dbw EFFECTCMDTYPE_INITIAL_EFFECT_1, RainDanceEffect
 	db  $00
@@ -460,7 +456,7 @@ SquirtleBubbleEffectCommands:
 	dbw EFFECTCMDTYPE_BEFORE_DAMAGE, Paralysis50PercentEffect
 	db  $00
 
-SquirtleWithdrawEffectCommands:
+WartortleWithdrawEffectCommands:
 	dbw EFFECTCMDTYPE_BEFORE_DAMAGE, WithdrawEffect
 	db  $00
 

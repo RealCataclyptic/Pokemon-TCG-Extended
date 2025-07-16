@@ -19,7 +19,7 @@ BulbasaurCard:
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_NORMAL ; category
-	dw Drain10EffectCommands  effect commands
+	dw BulbasaurLeechSeedEffectCommands ; effect commands
 	db NONE ; flags 1
 	db HEAL_USER ; flags 2
 	db NONE ; flags 3
@@ -83,7 +83,7 @@ IvysaurCard:
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_NORMAL ; category
-	dw InflictPoisonEffectCommands ; effect commands
+	dw TentacruelJellyfishStingEffectCommands ; effect commands
 	db INFLICT_POISON ; flags 1
 	db NONE ; flags 2
 	db NONE ; flags 3
@@ -133,7 +133,7 @@ VenusaurCard:
 	tx VenusaursMegaDrainDescriptionCont ; description (cont)
 	db 40 ; damage
 	db DAMAGE_NORMAL ; category
-	dw DrainHalfEffectCommands ; effect commands
+	dw ButterfreeMegaDrainEffectCommands ; effect commands
 	db NONE ; flags 1
 	db HEAL_USER ; flags 2
 	db NONE ; flags 3
@@ -169,7 +169,7 @@ CaterpieCard:
 	dw NONE ; description (cont)
 	db 10 ; damage
 	db DAMAGE_NORMAL ; category
-	dw MayInflictParalysisEffectCommands ; effect commands
+	dw OddishStunSporeEffectCommands ; effect commands
 	db INFLICT_PARALYSIS ; flags 1
 	db NONE ; flags 2
 	db NONE ; flags 3
@@ -219,7 +219,7 @@ MetapodCard:
 	dw NONE ; description (cont)
 	db 0 ; damage
 	db RESIDUAL ; category
-	dw WithdrawEffectCommands ; effect commands
+	dw WartortleWithdrawEffectCommands ; effect commands
 	db NONE ; flags 1
 	db NULLIFY_OR_WEAKEN_ATTACK ; flags 2
 	db NONE ; flags 3
@@ -233,7 +233,7 @@ MetapodCard:
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_NORMAL ; category
-	dw MayInflictParalysisEffectCommands ; effect commands
+	dw OddishStunSporeEffectCommands ; effect commands
 	db INFLICT_PARALYSIS ; flags 1
 	db NONE ; flags 2
 	db NONE ; flags 3
@@ -269,7 +269,7 @@ ButterfreeCard:
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_NORMAL ; category
-	dw OpponentSwitchesActiveEffectCommands ; effect commands
+	dw PidgeottoWhirlwindEffectCommands ; effect commands
 	db NONE ; flags 1
 	db SWITCH_OPPONENT_POKEMON ; flags 2
 	db NONE ; flags 3
@@ -2533,7 +2533,7 @@ SquirtleCard:
 	dw NONE ; description (cont)
 	db 0 ; damage
 	db RESIDUAL ; category
-	dw SquirtleWithdrawEffectCommands ; effect commands
+	dw WartortleWithdrawEffectCommands ; effect commands
 	db NONE ; flags 1
 	db NULLIFY_OR_WEAKEN_ATTACK ; flags 2
 	db NONE ; flags 3

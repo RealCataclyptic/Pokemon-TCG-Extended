@@ -106,7 +106,7 @@ InitSaveData:
 	ld hl, sCardCollection
 	ld bc, CARD_COLLECTION_SIZE
 .loop_collection
-	ld a, CARD_NOT_OWNED ; < PUT LD A 20 INTO HERE FOR ALL CARDS TWEAK
+	ld a, 10 ; < PUT LD A 20 INTO HERE FOR ALL CARDS TWEAK
 	ld [hli], a
 	dec bc
 	ld a, b
