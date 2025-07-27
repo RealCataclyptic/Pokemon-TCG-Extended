@@ -2193,7 +2193,7 @@ Palette99::
 	rgb  0,  0,  0
 	rgb  0, 31,  0
 
-Palette101::
+Palette101:: ; COLOSSEUM PALETTE 
 	db 0
 	db 7
 

@@ -3956,7 +3956,7 @@ LombreCard:
 	db HAS_EVOLUTION ; AI info
 	
 LudicoloCard:
-	db TYPE_PKMN_WATER ; type
+	db TYPE_PKMN_GRASS ; type
 	gfx LudicoloCardGFX ; gfx
 	tx LudicoloName ; name
 	db CIRCLE ; rarity

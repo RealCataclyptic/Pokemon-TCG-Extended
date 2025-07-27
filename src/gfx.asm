@@ -2685,29 +2685,29 @@ BeautiflyCardGFX::
 	INCBIN "gfx/cards/Beautifly.2bpp"
         
 CascoonCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Cascoon.pal"
+	INCBIN "gfx/cards/Cascoon.attrmap"
+ 	INCBIN "gfx/cards/Cascoon.2bpp"
         
 DustoxCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Dustox.pal"
+	INCBIN "gfx/cards/Dustox.attrmap"
+ 	INCBIN "gfx/cards/Dustox.2bpp"
         
 LotadCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Lotad.pal"
+	INCBIN "gfx/cards/Lotad.attrmap"
+ 	INCBIN "gfx/cards/Lotad.2bpp"
         
 LombreCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Lombre.pal"
+	INCBIN "gfx/cards/Lombre.attrmap"
+ 	INCBIN "gfx/cards/Lombre.2bpp"
         
 LudicoloCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Ludicolo.pal"
+	INCBIN "gfx/cards/Ludicolo.attrmap"
+ 	INCBIN "gfx/cards/Ludicolo.2bpp"
         
 SeedotCardGFX::
 	INCBIN "gfx/cards/recycle.pal"
@@ -2745,21 +2745,21 @@ PelipperCardGFX::
  	INCBIN "gfx/cards/recycle.2bpp"
         
 RaltsCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Ralts.pal"
+	INCBIN "gfx/cards/Ralts.attrmap"
+ 	INCBIN "gfx/cards/Ralts.2bpp"
         
 KirliaCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Kirlia.pal"
+	INCBIN "gfx/cards/Kirlia.attrmap"
+ 	INCBIN "gfx/cards/Kirlia.2bpp"
 
 SECTION "Card Gfx 18", ROMX 
         
 GardevoirCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Gardevoir.pal"
+	INCBIN "gfx/cards/Gardevoir.attrmap"
+ 	INCBIN "gfx/cards/Gardevoir.2bpp"
         
 SurskitCardGFX::
 	INCBIN "gfx/cards/recycle.pal"
@@ -2772,25 +2772,25 @@ MasquerainCardGFX::
  	INCBIN "gfx/cards/recycle.2bpp"
         
 ShroomishCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Shroomish.pal"
+	INCBIN "gfx/cards/Shroomish.attrmap"
+ 	INCBIN "gfx/cards/Shroomish.2bpp"
         
 BreloomCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Breloom.pal"
+	INCBIN "gfx/cards/Breloom.attrmap"
+ 	INCBIN "gfx/cards/Breloom.2bpp"
         
 SlakothCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
-        
+	INCBIN "gfx/cards/Slakoth.pal"
+	INCBIN "gfx/cards/Slakoth.attrmap"
+ 	INCBIN "gfx/cards/Slakoth.2bpp"
+	
 VigorothCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
-        
+	INCBIN "gfx/cards/Vigoroth.pal"
+	INCBIN "gfx/cards/Vigoroth.attrmap"
+ 	INCBIN "gfx/cards/Vigoroth.2bpp"
+	
 SlakingCardGFX::
 	INCBIN "gfx/cards/recycle.pal"
 	INCBIN "gfx/cards/recycle.attrmap"
@@ -2924,9 +2924,9 @@ IllumiseCardGFX::
  	INCBIN "gfx/cards/recycle.2bpp"
         
 RoseliaCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Roselia.pal"
+	INCBIN "gfx/cards/Roselia.attrmap"
+ 	INCBIN "gfx/cards/Roselia.2bpp"
         
 GulpinCardGFX::
 	INCBIN "gfx/cards/recycle.pal"
@@ -3150,9 +3150,9 @@ ChimechoCardGFX::
  	INCBIN "gfx/cards/recycle.2bpp"
         
 AbsolCardGFX::
-	INCBIN "gfx/cards/recycle.pal"
-	INCBIN "gfx/cards/recycle.attrmap"
- 	INCBIN "gfx/cards/recycle.2bpp"
+	INCBIN "gfx/cards/Absol.pal"
+	INCBIN "gfx/cards/Absol.attrmap"
+ 	INCBIN "gfx/cards/Absol.2bpp"
         
 WynautCardGFX::
 	INCBIN "gfx/cards/recycle.pal"
