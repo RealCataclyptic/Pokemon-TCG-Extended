@@ -51,14 +51,14 @@ AIActionTable_ImRonald:
 	ai_energy CHARMANDER,     3, +0
 	ai_energy CHARMELEON,     5, +0
 	ai_energy GROWLITHE,      2, +0
-	ai_energy ARCANINE_LV45,  4, +0
+	ai_energy ARCANINE,  4, +0
 	ai_energy SQUIRTLE,       2, +0
 	ai_energy WARTORTLE,      3, +0
 	ai_energy SEEL,           3, +0
 	ai_energy DEWGONG,        4, +0
 	ai_energy LAPRAS,         3, +0
 	ai_energy CUBONE,         3, +0
-	ai_energy MAROWAK_LV26,   3, +0
+	ai_energy MAROWAK,   3, +0
 	dw NULL
 
 .list_prize

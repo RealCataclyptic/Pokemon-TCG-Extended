@@ -27,29 +27,29 @@ AIActionTable_LegendaryMoltres:
 	jp AIPickPrizeCards
 
 .list_arena
-	dw MAGMAR_LV31
+	dw MAGMAR
 	dw GROWLITHE
 	dw VULPIX
-	dw MAGMAR_LV24
-	dw MOLTRES_LV35
-	dw MOLTRES_LV37
+	dw MAGMAR
+	dw MOLTRES
+	dw MOLTRES
 	dw NULL
 
 .list_bench
-	dw MOLTRES_LV35
+	dw MOLTRES
 	dw VULPIX
 	dw GROWLITHE
-	dw MAGMAR_LV31
-	dw MAGMAR_LV24
+	dw MAGMAR
+	dw MAGMAR
 	dw NULL
 
 .list_play_hand
-	dw MOLTRES_LV37
-	dw MOLTRES_LV35
+	dw MOLTRES
+	dw MOLTRES
 	dw VULPIX
 	dw GROWLITHE
-	dw MAGMAR_LV31
-	dw MAGMAR_LV24
+	dw MAGMAR
+	dw MAGMAR
 	dw NULL
 
 .list_retreat
@@ -59,18 +59,18 @@ AIActionTable_LegendaryMoltres:
 
 .list_energy
 	ai_energy VULPIX,         3, +0
-	ai_energy NINETALES_LV35, 3, +1
+	ai_energy NINETALES, 3, +1
 	ai_energy GROWLITHE,      3, +1
-	ai_energy ARCANINE_LV45,  4, +1
-	ai_energy MAGMAR_LV24,    4, -1
-	ai_energy MAGMAR_LV31,    1, -1
-	ai_energy MOLTRES_LV37,   3, +2
-	ai_energy MOLTRES_LV35,   4, +2
+	ai_energy ARCANINE,  4, +1
+	ai_energy MAGMAR,    4, -1
+	ai_energy MAGMAR,    1, -1
+	ai_energy MOLTRES,   3, +2
+	ai_energy MOLTRES,   4, +2
 	dw NULL
 
 .list_prize
 	dw ENERGY_REMOVAL
-	dw MOLTRES_LV37
+	dw MOLTRES
 	dw NULL
 
 .store_list_pointers
@@ -94,7 +94,7 @@ AIDoTurn_LegendaryMoltres:
 	ld a, AI_TRAINER_CARD_PHASE_04
 	call AIProcessHandTrainerCards
 
-; check if AI can play MoltresLv37
+; check if AI can play Moltres
 ; from hand and if so, play it.
 	ld a, DUELVARS_NUMBER_OF_POKEMON_IN_PLAY_AREA
 	call GetTurnDuelistVariable
@@ -107,9 +107,9 @@ AIDoTurn_LegendaryMoltres:
 	ld de, MUK
 	call CountPokemonWithActivePkmnPowerInBothPlayAreas
 	jr c, .skip_moltres ; skip if Muk in play
-	ld de, MOLTRES_LV37
+	ld de, MOLTRES
 	call LookForCardIDInHandList_Bank5
-	jr nc, .skip_moltres ; skip if no MoltresLv37 in hand
+	jr nc, .skip_moltres ; skip if no Moltres in hand
 	ldh [hTemp_ffa0], a
 	ld a, OPPACTION_PLAY_BASIC_PKMN
 	bank1call AIMakeDecision
@@ -131,15 +131,15 @@ AIDoTurn_LegendaryMoltres:
 	or a
 	jr nz, .skip_attach_energy
 
-; if MagmarLv31 is the Arena card and has no energy attached,
+; if Magmar is the Arena card and has no energy attached,
 ; try attaching an energy card to it from the hand.
 ; otherwise, run normal AI energy attach routine.
 	ld a, DUELVARS_ARENA_CARD
 	call GetTurnDuelistVariable
 	call GetCardIDFromDeckIndex
-	cp16 MAGMAR_LV31
+	cp16 MAGMAR
 	jr nz, .attach_normally
-	; MagmarLv31 is the Arena card
+	; Magmar is the Arena card
 	call CreateEnergyCardListFromHand
 	jr c, .skip_attach_energy
 	ld e, PLAY_AREA_ARENA

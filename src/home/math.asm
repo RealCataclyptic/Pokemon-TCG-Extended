@@ -1,4 +1,4 @@
-; returns a *= 10
+; returns a *= 10 ; Shaoden Base is in effect functions
 ATimes10::
 	push de
 	ld e, a

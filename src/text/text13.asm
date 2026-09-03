@@ -183,3 +183,48 @@ RecycleDescription:
 	line "in your discard pile on top of your"
 	line "deck."
 	done
+
+CantAttachEnergyToThisPKMNText:
+	text "You can't attach energy"
+	line "to this pokemon this turn."
+	done
+
+SwitchYesNoText:
+	text "Do you want to switch?"
+	line "            Yes     No"
+	done
+
+PokemonEvolvedIntoTyranitarText:
+	text "You evolved a pkmn! Yay!"
+	done
+
+ChooseATyranitarFromDeckText:
+	text "Choose an evolution from the deck."
+	done
+
+ChooseATyranitarText:
+	text "Choose an evolution."
+	done
+
+NoDamageDueToBenchGuardText:
+	text "No damage was done to the"
+	line "bench due to Bench Guard."
+	done
+
+Choose1BasicEnergyCardFromHandText:
+	text "Choose it already"
+	done
+
+CantUseNoDamageText:
+	text "You can't use this attack right now."
+	done
+
+DiscardedFromHandText:
+	text "<RAMTEXT> was discarded"
+	line "from the hand."
+	done
+
+EveryoneMilledText:
+	text "Both players milled"
+	line "10 cards from thier decks."
+	done

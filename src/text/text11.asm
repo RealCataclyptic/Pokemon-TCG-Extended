@@ -193,12 +193,6 @@ BubbleJetName:
 	text "Bubble Jet"
 	done
 
-VaporeonLv29Description:
-	text "Its cell structure is similar to"
-	line "water molecules. It will melt away"
-	line "and become invisible in water."
-	done
-
 VaporeonsWaterGunDescription:
 	text "Does 30 damage plus 10 more damage"
 	line "for each <WATER> Energy attached to"
@@ -207,7 +201,7 @@ VaporeonsWaterGunDescription:
 	line "add more than 20 damage in this way."
 	done
 
-VaporeonLv42Description:
+VaporeonDescription:
 	text "Lives close to water. Its long tail"
 	line "is ridged with a fin that is often"
 	line "mistaken for a mermaid's."
@@ -294,12 +288,6 @@ FreezeName:
 	text "Freeze"
 	done
 
-ArticunoLv35Description:
-	text "A legendary bird Pokémon that is"
-	line "said to appear to doomed people who"
-	line "are lost in icy mountains."
-	done
-
 QuickfreezeName:
 	text "Quickfreeze"
 	done
@@ -325,14 +313,10 @@ IceBreathDescription:
 	line "happen.)"
 	done
 
-ArticunoLv37Description:
+ArticunoDescription:
 	text "A legendary bird Pokémon. It freezes"
 	line "water that is contained in winter"
 	line "air and makes it snow."
-	done
-
-PikachuName:
-	text "Pikachu"
 	done
 
 GnawName:
@@ -352,12 +336,6 @@ MouseName:
 	text "Mouse"
 	done
 
-PikachuLv12Description:
-	text "When several of these Pokémon"
-	line "gather, their electricity can cause"
-	line "lightning storms."
-	done
-
 SparkName:
 	text "Spark"
 	done
@@ -368,12 +346,6 @@ SparkDescription:
 	line "attack does 10 damage to it. (Don't"
 	line "apply Weakness and Resistance for"
 	line "Benched Pokémon.)"
-	done
-
-PikachuLv14Description:
-	text "When several of these Pokémon"
-	line "gather, their electricity can build"
-	line "and cause lightning storms."
 	done
 
 GrowlName:
@@ -394,13 +366,13 @@ ThundershockName:
 	text "Thundershock"
 	done
 
-PikachuLv16Description:
+PikachuDescription:
 	text "When several of these Pokémon"
 	line "gather, their electricity could"
 	line "build and cause lightning storms."
 	done
 
-FlyingPikachuName:
+PikachuName:
 	text "Flying Pikachu"
 	done
 
@@ -417,24 +389,8 @@ FlyDescription:
 	line "(not even damage)."
 	done
 
-FlyingPikachuDescription:
-	text "By learning how to fly, Pikachu"
-	line "overcame its weakness to Fighting"
-	line "Pokémon."
-	done
-
-SurfingPikachuName:
-	text "Surfing Pikachu"
-	done
-
 SurfName:
 	text "Surf"
-	done
-
-SurfingPikachuDescription:
-	text "One summer, a group of Pikachu"
-	line "was found riding the waves at the"
-	line "local beach."
 	done
 
 RaichuName:
@@ -457,12 +413,6 @@ RaichusThunderDescription:
 	line "30 damage to itself."
 	done
 
-RaichuLv40Description:
-	text "Its long tail serves as a ground to"
-	line "protect itself from its own"
-	line "high-voltage power."
-	done
-
 GigashockName:
 	text "Gigashock"
 	done
@@ -477,25 +427,25 @@ GigashockDescription:
 	line "damage to each of them."
 	done
 
-RaichuLv45Description:
+RaichuDescription:
 	text "Its long tail serves as a ground to"
 	line "protect itself from its own high"
 	line "voltage power."
 	done
 
-MagnemiteName:
-	text "Magnemite"
+MagnemiteCardName:
+	text "MagnemiteCard"
 	done
 
 ThunderWaveName:
 	text "Thunder Wave"
 	done
 
-MagnemitesSelfdestructDescription:
+MagnemiteCardsSelfdestructDescription:
 	text "Does 10 damage to each Pokémon on"
 	line "each player's Bench. (Don't apply"
 	line "Weakness and Resistance for Benched"
-	line "Pokémon.) Magnemite does 40 damage"
+	line "Pokémon.) MagnemiteCardLv13Carddoes 40 damage"
 	line "to itself."
 	done
 
@@ -503,7 +453,7 @@ MagnetName:
 	text "Magnet"
 	done
 
-MagnemiteLv13Description:
+MagnemiteDescription:
 	text "Uses anti-gravity to stay suspended."
 	line "Appears without warning and uses"
 	line "attacks like Thunder Wave."
@@ -519,28 +469,8 @@ MagneticStormDescription:
 	line "reattach each of them."
 	done
 
-MagnemiteLv15Description:
-	text "It is born with the ability to defy"
-	line "gravity. Floats in air on powerful"
-	line "electromagnetic waves."
-	done
-
 MagnetonName:
 	text "Magneton"
-	done
-
-MagnetonLv28sSelfdestructDescription:
-	text "Does 20 damage to each Pokémon on"
-	line "each player's Bench. (Don't apply"
-	line "Weakness and Resistance for Benched"
-	line "Pokémon.)"
-	line "Magneton does 80 damage to itself."
-	done
-
-MagnetonLv28Description:
-	text "Formed by several Magnemites linked"
-	line "together. It frequently appears when"
-	line "sunspots flare up."
 	done
 
 SonicboomName:
@@ -555,7 +485,7 @@ SonicboomDescription:
 	line "happen.)"
 	done
 
-MagnetonLv35sSelfdestructDescription:
+MagnetonsSelfdestructDescription:
 	text "Does 20 damage to each Pokémon on"
 	line "each player's Bench. (Don't apply"
 	line "Weakness and Resistance for Benched"
@@ -563,8 +493,8 @@ MagnetonLv35sSelfdestructDescription:
 	line "to itself."
 	done
 
-MagnetonLv35Description:
-	text "Formed by several Magnemites linked"
+MagnetonDescription:
+	text "Formed by several MagnemiteCards linked"
 	line "together. They frequently appear"
 	line "when sunspots flare up."
 	done
@@ -598,12 +528,6 @@ EnergySpikeDescription:
 	line "afterward."
 	done
 
-ElectrodeLv35Description:
-	text "Stores electrical energy inside its"
-	line "body. Even the slightest shock could"
-	line "trigger a huge explosion."
-	done
-
 ChainLightningName:
 	text "Chain Lightning"
 	done
@@ -616,7 +540,7 @@ ChainLightningDescription:
 	line "Pokémon (including your own)."
 	done
 
-ElectrodeLv42Description:
+ElectrodeDescription:
 	text "It stores electrical energy under"
 	line "very high pressure. It often"
 	line "explodes with little or no"
@@ -657,12 +581,6 @@ ElectricName:
 	text "Electric"
 	done
 
-ElectabuzzLv20Description:
-	text "A wild Pokémon with a short temper."
-	line "It is able to distinguish colors"
-	line "and likes the color red."
-	done
-
 ThunderpunchName:
 	text "Thunderpunch"
 	done
@@ -675,7 +593,7 @@ ThunderpunchDescription:
 	line "itself."
 	done
 
-ElectabuzzLv35Description:
+ElectabuzzDescription:
 	text "Normally found near power plants,"
 	line "it can wander away and cause major"
 	line "blackouts in cities."
@@ -698,12 +616,6 @@ LightningName:
 	text "Lightning"
 	done
 
-JolteonLv24Description:
-	text "A sensitive Pokémon that easily"
-	line "becomes sad or angry. Every time"
-	line "its mood changes, it charges power."
-	done
-
 PinMissileName:
 	text "Pin Missile"
 	done
@@ -713,7 +625,7 @@ QuadrupleAttackX20Description:
 	line "damage times the number of heads."
 	done
 
-JolteonLv29Description:
+JolteonDescription:
 	text "It accumulates negative ions from"
 	line "the atmosphere to blast out 10,000-"
 	line "volt lightning bolts."
@@ -737,13 +649,6 @@ ThunderstormDescription:
 	line "the number of tails to itself."
 	done
 
-ZapdosLv40Description:
-	text "A legendary thunderbird Pokémon"
-	line "whose anger is said to cause storms."
-	line "Some say it has lived above the"
-	line "clouds for thousands of years."
-	done
-
 ZapdosThunderDescription:
 	text "Flip a coin. If tails, Zapdos does"
 	line "30 damage to itself."
@@ -756,12 +661,6 @@ ThunderboltName:
 ThunderboltDescription:
 	text "Discard all Energy cards attached to"
 	line "Zapdos in order to use this attack."
-	done
-
-ZapdosLv64Description:
-	text "A legendary bird Pokémon said to"
-	line "appear from clouds while wielding"
-	line "enormous lightning bolts."
 	done
 
 PealOfThunderName:
@@ -790,7 +689,7 @@ BigThunderDescription:
 	line "and Resistance still happen.)"
 	done
 
-ZapdosLv68Description:
+ZapdosDescription:
 	text "This legendary bird Pokémon is said"
 	line "to appear when the sky turns dark"
 	line "and lightning showers down."
@@ -1156,12 +1055,6 @@ BonekeeperName:
 	text "Bonekeeper"
 	done
 
-MarowakLv26Description:
-	text "The bone it holds is its key weapon."
-	line "It throws the bone skillfully like"
-	line "a boomerang to K.O. targets."
-	done
-
 BoneAttackName:
 	text "Bone Attack"
 	done
@@ -1186,7 +1079,7 @@ WailDescription:
 	line "or her deck afterward."
 	done
 
-MarowakLv32Description:
+MarowakDescription:
 	text "Small and weak, this Pokémon is"
 	line "adept with its bone club. It has"
 	line "grown more vicious over the ages."

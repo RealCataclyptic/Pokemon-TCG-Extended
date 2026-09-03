@@ -716,12 +716,6 @@ PoisonWhipName:
 	text "Poison Whip"
 	done
 
-TangelaLv12Description:
-	text "Its identity is obscured by masses"
-	line "of thick, blue vines. The vines are"
-	line "said to never stop growing."
-	done
-
 ScytherName:
 	text "Scyther"
 	done
@@ -889,7 +883,7 @@ FireBlastDescription:
 	line "attack."
 	done
 
-NinetalesLv32Description:
+NinetalesDescription:
 	text "Very smart and very vengeful."
 	line "Grabbing one of its many tails could"
 	line "result in a 1,000-year curse."
@@ -922,12 +916,6 @@ DancingEmbersName:
 DancingEmbersDescription:
 	text "Flip 8 coins. This attack does 10"
 	line "damage times the number of heads."
-	done
-
-NinetalesLv35Description:
-	text "According to an enduring legend,"
-	line "9 noble heroes were united and"
-	line "reincarnated as this."
 	done
 
 GrowlitheName:
@@ -979,12 +967,6 @@ LegendaryName:
 	text "Legendary"
 	done
 
-ArcanineLv34Description:
-	text "A legendary Pokémon famous for its"
-	line "beauty. It looks almost as if it"
-	line "flies when it runs."
-	done
-
 ArcaninesFlamethrowerDescription:
 	text "Discard 1 <FIRE> Energy card attached to"
 	line "Arcanine in order to use this"
@@ -999,7 +981,7 @@ TakeDownDescription:
 	text "Arcanine does 30 damage to itself."
 	done
 
-ArcanineLv45Description:
+ArcanineDescription:
 	text "A Pokémon that has been long admired"
 	line "for its beauty. It runs gracefully,"
 	line "as if on wings."
@@ -1076,12 +1058,6 @@ SpitfireName:
 	text "Spitfire"
 	done
 
-MagmarLv24Description:
-	text "Its body always burns with an orange"
-	line "glow that enables it to hide"
-	line "perfectly among flames."
-	done
-
 SmokescreenName:
 	text "Smokescreen"
 	done
@@ -1093,7 +1069,7 @@ MagmarsSmokescreenDescription:
 	line "tails, that attack does nothing."
 	done
 
-MagmarLv31Description:
+MagmarDescription:
 	text "Found at the mouths of volcanoes and"
 	line "extremely hard to spot. There are"
 	line "very few instances of capturing this"
@@ -1121,18 +1097,12 @@ FlareonsRageDescription:
 	line "for each damage counter on Flareon."
 	done
 
-FlareonLv22Description:
-	text "It has a flame chamber inside its"
-	line "body. It inhales, then blows out"
-	line "fire that is over 3,000 degrees."
-	done
-
 FlareonsFlamethrowerDescription:
 	text "Discard 1 <FIRE> Energy card attached to"
 	line "Flareon in order to use this attack."
 	done
 
-FlareonLv28Description:
+FlareonDescription:
 	text "When storing thermal energy in its"
 	line "body, its temperature could soar to"
 	line "over 1,600 degrees."
@@ -1158,12 +1128,6 @@ DiveBombName:
 	text "Dive Bomb"
 	done
 
-MoltresLv35Description:
-	text "Known as the legendary bird of fire."
-	line "Every flap of its wings creates a"
-	line "dazzling flash of flames."
-	done
-
 FiregiverName:
 	text "Firegiver"
 	done
@@ -1177,7 +1141,7 @@ FiregiverDescription:
 	line "deck afterward."
 	done
 
-MoltresLv37Description:
+MoltresDescription:
 	text "A legendary bird Pokémon. As it"
 	line "flaps its flaming wings, even the"
 	line "night sky will turn red."

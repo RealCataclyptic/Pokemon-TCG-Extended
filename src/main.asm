@@ -146,6 +146,8 @@ INCLUDE "data/card_pointers.asm"
 
 SECTION "Cards", ROMX
 INCLUDE "data/cards.asm"
+SECTION "Cards2", ROMX
+INCLUDE "data/cards2.asm"
 
 SECTION "Load Gfx", ROMX
 INCLUDE "engine/overworld/load_overworld.asm"

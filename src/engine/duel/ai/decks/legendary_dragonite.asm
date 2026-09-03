@@ -55,14 +55,14 @@ AIActionTable_LegendaryDragonite:
 	ai_energy GYARADOS,       4, -1
 	ai_energy DRATINI,        2, +0
 	ai_energy DRAGONAIR,      4, +0
-	ai_energy DRAGONITE_LV41, 3, -1
+	ai_energy DRAGONITE, 3, -1
 	ai_energy KANGASKHAN,     2, -2
 	ai_energy LAPRAS,         3, +0
 	dw NULL
 
 .list_prize
 	dw GAMBLER
-	dw DRAGONITE_LV41
+	dw DRAGONITE
 	dw KANGASKHAN
 	dw NULL
 

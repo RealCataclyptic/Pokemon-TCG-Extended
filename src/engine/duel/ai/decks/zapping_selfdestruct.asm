@@ -28,16 +28,16 @@ AIActionTable_ZappingSelfdestruct:
 
 .list_arena
 	dw KANGASKHAN
-	dw ELECTABUZZ_LV35
+	dw ELECTABUZZ
 	dw TAUROS
-	dw MAGNEMITE_LV13
+	dw MAGNEMITE
 	dw VOLTORB
 	dw NULL
 
 .list_bench
-	dw MAGNEMITE_LV13
+	dw MAGNEMITE
 	dw VOLTORB
-	dw ELECTABUZZ_LV35
+	dw ELECTABUZZ
 	dw TAUROS
 	dw KANGASKHAN
 	dw NULL
@@ -47,11 +47,11 @@ AIActionTable_ZappingSelfdestruct:
 	dw NULL
 
 .list_energy
-	ai_energy MAGNEMITE_LV13,  3, +1
-	ai_energy MAGNETON_LV28,   4, +0
+	ai_energy MAGNEMITE,  3, +1
+	ai_energy MAGNETON,   4, +0
 	ai_energy VOLTORB,         3, +1
-	ai_energy ELECTRODE_LV35,  3, +0
-	ai_energy ELECTABUZZ_LV35, 1, +0
+	ai_energy ELECTRODE,  3, +0
+	ai_energy ELECTABUZZ, 1, +0
 	ai_energy KANGASKHAN,      2, -2
 	ai_energy TAUROS,          3, +0
 	dw NULL

@@ -29,7 +29,7 @@ DopeyName:
 	text "Dopey"
 	done
 
-SlowpokeLv9Description:
+SlowpokeDescription:
 	text "Incredibly slow and dopey. It takes"
 	line "5 seconds for it to feel pain when"
 	line "under attack."
@@ -114,7 +114,7 @@ GasName:
 	text "Gas"
 	done
 
-GastlyLv8Description:
+GastlyDescription:
 	text "Almost invisible, this gaseous"
 	line "Pokémon cloaks the target and puts"
 	line "it to sleep without notice."
@@ -132,13 +132,6 @@ EnergyConversionDescription:
 	text "Put up to 2 Energy cards from your"
 	line "discard pile into your hand. Gastly"
 	line "does 10 damage to itself."
-	done
-
-GastlyLv17Description:
-	text "A mysterious Pokémon. Some say it is"
-	line "a lifeform from another dimension,"
-	line "while others believe it is formed"
-	line "from smog."
 	done
 
 HaunterName:
@@ -345,13 +338,6 @@ GeneticName:
 	text "Genetic"
 	done
 
-MewtwoLv53Description:
-	text "A scientist created this Pokémon"
-	line "after years of horrific"
-	line "gene-splicing and DNA engineering"
-	line "experiments."
-	done
-
 EnergyAbsorptionName:
 	text "Energy Absorption"
 	done
@@ -366,7 +352,7 @@ PsyburnName:
 	text "Psyburn"
 	done
 
-MewtwoLv60Description:
+MewtwoDescription:
 	text "Years of genetic experiments"
 	line "resulted in the creation of this"
 	line "never-before-seen violent Pokémon."
@@ -393,12 +379,6 @@ NewSpeciesName:
 	text "New Species"
 	done
 
-MewLv8Description:
-	text "So rare that it is still said to be"
-	line "a mirage by many experts. Only a few"
-	line "people have seen it worldwide."
-	done
-
 MysteryAttackName:
 	text "Mystery Attack"
 	done
@@ -410,7 +390,7 @@ MysteryAttackDescription:
 	line "Pokémon."
 	done
 
-MewLv15Description:
+MewDescription:
 	text "When viewed through a microscope, "
 	line "this Pokémon's short, fine, delicate"
 	line "hair can be seen."
@@ -509,12 +489,6 @@ GaleDescription:
 	line "switching the Pokémon.)"
 	done
 
-PidgeotLv38Description:
-	text "This Pokémon flies at Mach 2 speed,"
-	line "seeking prey. Its large talons are"
-	line "feared as wicked weapons."
-	done
-
 HurricaneName:
 	text "Hurricane"
 	done
@@ -527,7 +501,7 @@ HurricaneDescription:
 	line "hand."
 	done
 
-PidgeotLv40Description:
+PidgeotDescription:
 	text "When hunting, it skims the surface"
 	line "of water at high speed to pick off"
 	line "unwary prey such as Magikarp."
@@ -695,13 +669,6 @@ BalloonName:
 	text "Balloon"
 	done
 
-JigglypuffLv12Description:
-	text "When its huge eyes light up, it"
-	line "sings a mysteriously soothing"
-	line "melody that lulls its enemies to"
-	line "sleep."
-	done
-
 FriendshipSongName:
 	text "Friendship Song"
 	done
@@ -725,17 +692,11 @@ ExpandDescription:
 	line "Resistance)."
 	done
 
-JigglypuffLv13Description:
-	text "Uses its alluring eyes to enrapture"
-	line "its foe. It then sings a pleasing"
-	line "melody that lulls the foe to sleep."
-	done
-
 LullabyName:
 	text "Lullaby"
 	done
 
-JigglypuffLv14Description:
+JigglypuffDescription:
 	text "When its huge eyes light up, it"
 	line "sings a mysteriously soothing melody"
 	line "that lulls its enemies to sleep."
@@ -782,12 +743,6 @@ ScratchCatName:
 	text "Scratch Cat"
 	done
 
-MeowthLv14Description:
-	text "Appears to be more active at night."
-	line "It loves round and shiny things, so"
-	line "it can't stop from picking them up."
-	done
-
 PayDayName:
 	text "Pay Day"
 	done
@@ -796,7 +751,7 @@ PayDayDescription:
 	text "Flip a coin. If heads, draw a card."
 	done
 
-MeowthLv15Description:
+MeowthDescription:
 	text "Adores circular objects. Wanders"
 	line "the streets on a nightly basis to"
 	line "look for dropped loose change."
@@ -1162,12 +1117,6 @@ HealingWindDescription:
 	line "fewer damage counters than that,"
 	line "remove all of them from that"
 	line "Pokémon."
-	done
-
-DragoniteLv41Description:
-	text "It is said that this Pokémon lives"
-	line "somewhere in the sea and that it"
-	line "flies. However, it is only a rumor."
 	done
 
 StepInName:

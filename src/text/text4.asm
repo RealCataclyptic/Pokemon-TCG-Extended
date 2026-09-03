@@ -783,7 +783,7 @@ Man1GiveCardText:
 	line "Thank you! Thank you!!!"
 	done
 
-Man1PlayerReceivePikachuAltLv16Text:
+Man1PlayerReceivePikachuText:
 	text "Since you've been so kind and given"
 	line "me so many cards,"
 	line "please accept this card as a gift"

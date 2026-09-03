@@ -28,10 +28,10 @@ CreateCardSetList:
 	jr nz, .loop_all_cards
 
 ; it's same set as input
-	cp16 VENUSAUR_LV64
+	cp16 VENUSAUR
 	jp z, .SetVenusaurLv64OwnedFlag
-	cp16 MEW_LV15
-	jp z, .SetMewLv15OwnedFlag
+	cp16 MEW
+	jp z, .SetMewOwnedFlag
 
 	push bc
 	push hl
@@ -132,7 +132,7 @@ CreateCardSetList:
 .check_mew
 	bit MEW_OWNED_PHANTOM_F, a
 	jr z, .find_first_owned
-	call .PlaceMewLv15InList
+	call .PlaceMewInList
 
 .find_first_owned
 	dec l
@@ -163,7 +163,7 @@ CreateCardSetList:
 	ld [hl], a
 	ret
 
-.SetMewLv15OwnedFlag
+.SetMewOwnedFlag
 	ld a, (1 << MEW_OWNED_PHANTOM_F)
 ;	fallthrough
 
@@ -191,7 +191,7 @@ CreateCardSetList:
 .PlaceVenusaurLv64InList
 	push af
 	push hl
-	ld de, VENUSAUR_LV64
+	ld de, VENUSAUR
 ;	fallthrough
 
 ; places card in register de directly in the list
@@ -212,10 +212,10 @@ CreateCardSetList:
 	pop af
 	ret
 
-.PlaceMewLv15InList
+.PlaceMewInList
 	push af
 	push hl
-	ld de, MEW_LV15
+	ld de, MEW
 	jr .PlaceCardInList
 
 ; a = CARD_SET_* constant
@@ -406,9 +406,9 @@ PrintCardSetListEntries:
 	ld d, [hl]
 	cp16 DOUBLE_COLORLESS_ENERGY + 1
 	jr c, .energy_card
-	cp16 VENUSAUR_LV64
+	cp16 VENUSAUR
 	jr z, .phantom_card
-	cp16 MEW_LV15
+	cp16 MEW
 	jr z, .phantom_card
 
 	ld a, [wNumVisibleCardListEntries]

@@ -1779,7 +1779,7 @@ Toxic_AIEffect:
 	lb de, 20, 20
 	jp UpdateExpectedAIDamage
 
-; Defending Pokémon becomes double poisoned (takes 20 damage per turn rather than 10)
+; Defending Pok??mon becomes double poisoned (takes 20 damage per turn rather than 10)
 Toxic_DoublePoisonEffect:
 	jp DoublePoisonEffect
 
@@ -3132,8 +3132,8 @@ IceBreath_RandomPokemonDamageEffect:
 
 FocusEnergyEffect:
 	ld hl, wTempTurnDuelistCardID
-	cphl VAPOREON_LV29
-	ret nz ; return if no VaporeonLv29
+	cphl VAPOREON
+	ret nz ; return if no Vaporeon
 	ld a, SUBSTATUS1_NEXT_TURN_DOUBLE_DAMAGE
 	jp ApplySubstatus1ToAttackingCard
 
@@ -3420,12 +3420,12 @@ Wildfire_DiscardDeckEffect:
 	call DrawWideTextBox_PrintText
 	jp SwapTurn
 
-MoltresLv35DiveBomb_AIEffect:
+MoltresDiveBomb_AIEffect:
 	ld a, 80 / 2
 	lb de, 0, 80
 	jp SetExpectedAIDamage
 
-MoltresLv35DiveBomb_Success50PercentEffect:
+MoltresDiveBomb_Success50PercentEffect:
 	ldtx de, SuccessCheckIfHeadsAttackIsSuccessfulText
 	call TossCoin
 	jr c, .heads
@@ -3718,24 +3718,6 @@ Firegiver_AddToHandEffect:
 	ldtx hl, DrewFireEnergyFromTheHandText
 	call DrawWideTextBox_WaitForInput
 	jp ShuffleCardsInDeck
-
-MoltresLv37DiveBomb_AIEffect:
-	ld a, 70 / 2
-	lb de, 0, 70
-	jp SetExpectedAIDamage
-
-MoltresLv37DiveBomb_Success50PercentEffect:
-	ldtx de, SuccessCheckIfHeadsAttackIsSuccessfulText
-	call TossCoin
-	jr c, .heads
-; tails
-	xor a
-	call SetDefiniteDamage
-	jp SetWasUnsuccessful
-.heads
-	ld a, ATK_ANIM_DIVE_BOMB
-	ld [wLoadedAttackAnimation], a
-	ret
 
 ; output in de the number of energy cards
 ; attached to the Defending Pokemon times 10.
@@ -5715,7 +5697,7 @@ LightScreenEffect:
 	ld a, SUBSTATUS1_HALVE_DAMAGE
 	jp ApplySubstatus1ToAttackingCard
 
-MagnemiteSelfdestructEffect:
+MagnemiteCardSelfdestructEffect:
 	ld a, 40
 	call DealRecoilDamageToSelf
 
@@ -6241,10 +6223,6 @@ Gigashock_BenchDamageEffect:
 .done
 	jp SwapTurn
 
-MagnetonLv28SelfdestructEffect:
-	ld a, 80
-	call DealRecoilDamageToSelf
-
 ; own bench
 	ld a, TRUE
 	ld [wIsDamageToSelf], a
@@ -6267,7 +6245,7 @@ Sonicboom_UnaffectedByColorEffect:
 Sonicboom_NullEffect:
 	ret
 
-MagnetonLv35SelfdestructEffect:
+MagnetonSelfdestructEffect:
 	ld a, 100
 	call DealRecoilDamageToSelf
 
@@ -6858,12 +6836,12 @@ StepIn_SwitchEffect:
 	set USED_PKMN_POWER_THIS_TURN_F, [hl]
 	ret
 
-DragoniteLv45Slam_AIEffect:
+DragoniteSlam_AIEffect:
 	ld a, (40 * 2) / 2
 	lb de, 0, 80
 	jp SetExpectedAIDamage
 
-DragoniteLv45Slam_MultiplierEffect:
+DragoniteSlam_MultiplierEffect:
 	ld hl, 40
 	call LoadTxRam3
 	ldtx de, DamageCheckIfHeadsXDamageText
@@ -7563,23 +7541,6 @@ HealingWind_PlayAreaHealEffect:
 	dec d
 	jr nz, .loop_play_area
 	ret
-
-DragoniteLv41Slam_AIEffect:
-	ld a, (30 * 2) / 2
-	lb de, 0, 60
-	jp SetExpectedAIDamage
-
-DragoniteLv41Slam_MultiplierEffect:
-	ld hl, 30
-	call LoadTxRam3
-	ldtx de, DamageCheckIfHeadsXDamageText
-	ld a, 2
-	call TossCoinATimes
-	ld c, a
-	add a
-	add c
-	call ATimes10
-	jp SetDefiniteDamage
 
 CatPunchEffect:
 	call SwapTurn

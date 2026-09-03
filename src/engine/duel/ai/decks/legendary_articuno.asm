@@ -31,12 +31,12 @@ AIActionTable_LegendaryArticuno:
 	dw LAPRAS
 	dw DITTO
 	dw SEEL
-	dw ARTICUNO_LV35
-	dw ARTICUNO_LV37
+	dw ARTICUNO
+	dw ARTICUNO
 	dw NULL
 
 .list_bench
-	dw ARTICUNO_LV35
+	dw ARTICUNO
 	dw SEEL
 	dw LAPRAS
 	dw CHANSEY
@@ -52,15 +52,15 @@ AIActionTable_LegendaryArticuno:
 	ai_energy SEEL,          3, +1
 	ai_energy DEWGONG,       4, +0
 	ai_energy LAPRAS,        3, +0
-	ai_energy ARTICUNO_LV35, 4, +1
-	ai_energy ARTICUNO_LV37, 3, +0
+	ai_energy ARTICUNO, 4, +1
+	ai_energy ARTICUNO, 3, +0
 	ai_energy CHANSEY,       0, -8
 	ai_energy DITTO,         3, +0
 	dw NULL
 
 .list_prize
 	dw GAMBLER
-	dw ARTICUNO_LV37
+	dw ARTICUNO
 	dw NULL
 
 .store_list_pointers
@@ -93,7 +93,7 @@ ScoreLegendaryArticunoCards:
 	ld de, LAPRAS
 	call CheckForBenchIDAtHalfHPAndCanUseSecondAttack
 	jr c, .articuno
-	ld de, ARTICUNO_LV35
+	ld de, ARTICUNO
 	call CheckForBenchIDAtHalfHPAndCanUseSecondAttack
 	jr c, .lapras
 	ld de, DEWGONG
@@ -119,11 +119,11 @@ ScoreLegendaryArticunoCards:
 	jp RaiseAIScoreToAllMatchingIDsInBench
 
 .articuno
-	ld de, ARTICUNO_LV35
+	ld de, ARTICUNO
 	ld b, PLAY_AREA_BENCH_1
 	call LookForCardIDInPlayArea_Bank5
 	jr nc, .dewgong
-	ld bc, ARTICUNO_LV35
+	ld bc, ARTICUNO
 	jp RaiseAIScoreToAllMatchingIDsInBench
 
 .dewgong

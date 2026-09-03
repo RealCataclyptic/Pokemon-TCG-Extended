@@ -151,7 +151,7 @@ AIProcessEnergyCards:
 	ld de, MUK
 	call CountPokemonWithActivePkmnPowerInBothPlayAreas
 	jr c, .check_if_active
-	ld de, VENUSAUR_LV67
+	ld de, VENUSAUR
 	call CountTurnDuelistPokemonWithActivePkmnPower
 	jr nc, .check_if_active
 	ld a, 1
@@ -168,7 +168,7 @@ AIProcessEnergyCards:
 	jr z, .add_to_score
 
 ; subtract from score instead
-; if Player is running MewtwoLv53 mill deck.
+; if Player is running Mewtwo mill deck.
 	ld a, 5
 	call AIDiscourage
 	jr .check_defending_can_ko
@@ -456,11 +456,11 @@ DetermineAIScoreOfAttackEnergyRequirement:
 
 ; checks if there is surplus energy for attack
 ; that discards attached energy card.
-; if current card is ZapdosLv64, don't add to score.
+; if current card is Zapdos, don't add to score.
 ; if there is no surplus energy, encourage playing energy.
 .discard_energy
 	ld hl, wLoadedCard1ID
-	cphl ZAPDOS_LV64
+	cphl ZAPDOS
 	jr z, .check_evolution
 	call CheckIfNoSurplusEnergyForAttack
 	jr c, .asm_166cd
@@ -685,13 +685,13 @@ CheckIfEvolutionNeedsEnergyForAttack:
 
 ; returns in e the card ID of the energy required for
 ; the Discard/Energy Boost attack loaded in wSelectedAttack.
-; if it's ZapdosLv64's Thunderbolt attack, return no carry.
+; if it's Zapdos's Thunderbolt attack, return no carry.
 ; if it's Charizard's Fire Spin or Exeggutor's Big Eggsplosion
 ; attack, don't return energy card ID, but set carry.
 ; output:
 ;	b = TRUE if needs color energy;
 ;	c = TRUE if only needs colorless energy;
-;	carry set if not ZapdosLv64's Thunderbolt attack.
+;	carry set if not Zapdos's Thunderbolt attack.
 GetEnergyCardForDiscardOrEnergyBoostAttack:
 ; load card ID and check selected attack index.
 	ldh a, [hTempPlayAreaLocation_ff9d]
@@ -702,12 +702,12 @@ GetEnergyCardForDiscardOrEnergyBoostAttack:
 	or a
 	jr z, .first_attack
 
-; check if second attack is ZapdosLv64's Thunderbolt,
+; check if second attack is Zapdos's Thunderbolt,
 ; Charizard's Fire Spin or Exeggutor's Big Eggsplosion,
 ; for these to be treated differently.
 ; for both attacks, load its energy cost.
 	ld hl, wLoadedCard2ID
-	cphl ZAPDOS_LV64
+	cphl ZAPDOS
 	jr z, .zapdos
 	cphl CHARIZARD
 	jr z, .charizard_or_exeggutor
@@ -762,7 +762,7 @@ GetEnergyCardForDiscardOrEnergyBoostAttack:
 	scf
 	ret
 
-; for ZapdosLv64's Thunderbolt attack, return with no carry.
+; for Zapdos's Thunderbolt attack, return with no carry.
 .zapdos
 	or a
 	ret
@@ -845,7 +845,7 @@ AITryToPlayEnergyCard:
 
 ; for attacks that discard energy or get boost for
 ; additional energy cards, get the energy card ID required by attack.
-; if it's ZapdosLv64's Thunderbolt attack, return.
+; if it's Zapdos's Thunderbolt attack, return.
 .energy_boost_or_discard_energy
 	call GetEnergyCardForDiscardOrEnergyBoostAttack
 	ret nc

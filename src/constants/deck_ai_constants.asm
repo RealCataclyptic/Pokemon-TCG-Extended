@@ -92,7 +92,7 @@ DEF AI_ENERGY_FLAG_SKIP_ARENA_CARD EQU 1 << 7 ; whether to include Arena card in
 	; Professor Oak
 
 ; used by wAIBarrierFlagCounter to determine
-; whether Player is running MewtwoLv53 mill deck.
+; whether Player is running Mewtwo mill deck.
 ; flag set means true, flag not set means false.
 DEF AI_MEWTWO_MILL_F EQU 7
 DEF AI_MEWTWO_MILL   EQU 1 << AI_MEWTWO_MILL_F

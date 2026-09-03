@@ -367,13 +367,13 @@ AIDecideEvolution:
 	cp PIKACHU_DECK_ID
 	jr nz, .check_score
 	ld hl, wLoadedCard1ID
-	cphl PIKACHU_LV12
+	cphl PIKACHU
 	jr z, .pikachu
-	cphl PIKACHU_LV14
+	cphl PIKACHU
 	jr z, .pikachu
-	cphl PIKACHU_LV16
+	cphl PIKACHU
 	jr z, .pikachu
-	cphl PIKACHU_ALT_LV16
+	cphl PIKACHU
 	jr nz, .check_score
 .pikachu
 	ld a, 3
@@ -562,11 +562,11 @@ AIDecidePlayLegendaryBirds:
 ; check if card applies
 .begin
 	ld hl, wLoadedCard1ID
-	cphl ARTICUNO_LV37
+	cphl ARTICUNO
 	jr z, .articuno
-	cphl MOLTRES_LV37
+	cphl MOLTRES
 	jr z, .moltres
-	cphl ZAPDOS_LV68
+	cphl ZAPDOS
 	jr z, .zapdos
 	ret
 
