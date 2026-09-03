@@ -214,7 +214,8 @@ LoadLoaded1CardGfx::
 
 	push de
 	ld de, wCardPalette
-	ld b, 3 palettes
+;	ld b, 3 palettes
+	ld b, 5 palettes	; 5pal mod
 .copy_card_palette
 	ld a, [hli]
 	ld [de], a
@@ -224,8 +225,10 @@ LoadLoaded1CardGfx::
 
 	; de = wCardAttrMap
 	ld b, $30
+	ld c, 3	; 5pal mod
 .copy_card_attrmap
 	ld a, [hli]
+	add c		; 5pal mod
 	ld [de], a
 	inc de
 	dec b

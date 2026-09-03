@@ -1182,7 +1182,9 @@ HandleColorChangeScreen:
 ; draw card gfx
 	ld de, v0Tiles1 + $20 tiles ; destination offset of loaded gfx
 	call LoadLoaded1CardGfx
-	bank1call SetBGP5ToCardPalette
+;	bank1call SetBGP5ToCardPalette		; 5pal mod, BGP
+;	bank1call SetColorPalette_Player
+	bank1call SetNonColorizedCardPalette
 	bank1call FlushAllPalettes
 	ld a, $a0
 	lb hl, 6, 1

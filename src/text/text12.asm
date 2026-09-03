@@ -86,7 +86,7 @@ SlowbroDescription:
 	done
 
 GastlyName:
-	text "Gastly"
+	text "Sceptile--Test"
 	done
 
 SleepingGasName:

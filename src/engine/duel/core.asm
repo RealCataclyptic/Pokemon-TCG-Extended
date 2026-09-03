@@ -1012,7 +1012,8 @@ OpenAttackPage:
 	call FinishQueuedAnimations
 	ld de, v0Tiles1 + $20 tiles
 	call LoadLoaded1CardGfx
-	call SetBGP5ToCardPalette
+;	call SetBGP5ToCardPalette		; 5pal mod, BGP
+	call SetColorizedCardPalette
 	call FlushAllPalettes
 
 	ldh a, [hCurMenuItem]
@@ -1832,7 +1833,7 @@ ChooseInitialArenaAndBenchPokemon:
 	call DrawDuelBoxMessage
 	ldtx hl, ChooseBasicPkmnToPlaceInArenaText
 	call DrawWideTextBox_WaitForInput
-	ld a, PRACTICEDUEL_DRAW_SEVEN_CARDS
+;	ld a, PRACTICEDUEL_DRAW_SEVEN_CARDS
 	call DoPracticeDuelAction
 .choose_arena_loop
 	xor a
@@ -2234,12 +2235,14 @@ DrawDuelMainScene::
 	ld a, DUEL_MAIN_SCENE
 	ld [wDuelDisplayedScreen], a
 
-;.place_player_arena_pkmn
+.place_player_arena_pkmn
 	ld a, DUELVARS_ARENA_CARD
 	call GetTurnDuelistVariable
 	ld de, v0Tiles1 + $50 tiles
 	call LoadPlayAreaCardGfx
-	call SetBGP5ToCardPalette
+;	call SetBGP5ToCardPalette	; 5pal mod, BGP
+;	call SetColorPalette_Player
+	call SetNonColorizedCardPalette
 	ld a, DUELVARS_ARENA_CARD
 	call GetTurnDuelistVariable
 	cp -1
@@ -2252,12 +2255,14 @@ DrawDuelMainScene::
 	call ApplyCardCGBAttributes
 
 .place_opponent_arena_pkmn
-	call SwapTurn
+	call SwapTurn			
 	ld a, DUELVARS_ARENA_CARD
-	call GetTurnDuelistVariable
+	call GetTurnDuelistVariable	
 	ld de, v0Tiles1 + $20 tiles
 	call LoadPlayAreaCardGfx
-	call SetBGP2ToCardPalette
+;	call SetBGP2ToCardPalette	; 5pal mod, BGP
+;	call SetColorPalette_Player
+	call SetNonColorizedCardPalette
 	ld a, DUELVARS_ARENA_CARD
 	call GetTurnDuelistVariable
 	cp -1
@@ -2268,7 +2273,7 @@ DrawDuelMainScene::
 	lb bc, 8, 6
 	call FillRectangle
 	call ApplyCardCGBAttributes
-	call SwapTurn
+	call SwapTurn			
 
 .place_other_elements
 	call FlushAllPalettes
@@ -3360,7 +3365,8 @@ OpenCardPage:
 	call SetDefaultConsolePalettes
 	ld de, v0Tiles1 + $20 tiles
 	call LoadLoaded1CardGfx
-	call SetBGP5ToCardPalette
+;	call SetBGP5ToCardPalette		; 5pal mod, BGP
+	call SetColorizedCardPalette
 	call FlushAllPalettes
 
 	; display the initial card page for the card at wLoadedCard1
@@ -3516,7 +3522,8 @@ LoadSelectedCardGfx:
 	call LoadCardDataToBuffer1_FromCardID
 	ld de, v0Tiles1 + $20 tiles
 	call LoadLoaded1CardGfx
-	call SetBGP5ToCardPalette
+;	call SetBGP5ToCardPalette		; 5pal mod, BGP
+	call SetColorizedCardPalette
 	jp FlushAllPalettes
 
 CardPageDisplayPointerTable:
@@ -3724,43 +3731,80 @@ LoadPlayAreaCardGfx:
 	pop de
 	jp LoadLoaded1CardGfx
 
-SetBGP5ToCardPalette:
-	ld a, $05 ; CGB BG Palette 5
-	jp SetCardPalette
+;SetBGP5ToCardPalette:		; 5pal mod
+;	ld a, $05 ; CGB BG Palette 5
+;	jp SetNonColorizedCardPalette
 
-SetBGP2ToCardPalette:
-	ld a, $02 ; CGB BG Palette 2
+;SetBGP2ToCardPalette:		; 5pal mod
+;	ld a, $02 ; CGB BG Palette 2
 ;	fallthrough
 
 ; a = pal index
-SetCardPalette:
-	ld c, a
-	add a
-	add a
-	add a ; a *= PAL_SIZE
-	ld e, a
-	ld d, $00
-	ld hl, wBackgroundPalettesCGB
-	add hl, de
-	ld de, wCardPalette
-	ld b, 3 palettes
-.copy_pal_loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	dec b
-	jr nz, .copy_pal_loop
+;SetCardPalette:		; 5pal mod
+;	ld c, a
+;	add a
+;	add a
+;	add a ; a *= PAL_SIZE
+;	ld e, a
+;	ld d, $00
+;;	ld hl, wBackgroundPalettesCGB
+;	add hl, de
+;	ld de, wCardPalette
+;	ld b, 3 palettes
+;.copy_pal_loop
+;	ld a, [de]
+;	inc de
+;	ld [hli], a
+;	dec b
+;	jr nz, .copy_pal_loop
+;
+;	; de = wCardAttrMap
+;	ld b, $30
+;.loop_set_attr_pal
+;	ld a, [de]
+;	add c
+;	ld [de], a
+;	inc de
+;	dec b
+;	jr nz, .loop_set_attr_pal
+;	ret
 
-	; de = wCardAttrMap
-	ld b, $30
+
+; sets card colorized if it's the player's turn
+; otherwise make it grayscale
+SetColorPalette_Player:
+    	call IsPlayerTurn
+    	jr c, SetColorizedCardPalette
+    	jr SetNonColorizedCardPalette
+
+; sets card colorized if it's the opponent's turn
+; otherwise make it grayscale
+SetColorPalette_Opp:
+    	call IsPlayerTurn
+    	jr c, SetNonColorizedCardPalette
+; fallthrough
+
+SetColorizedCardPalette:
+    	ld hl, wBackgroundPalettesCGB + 3 * PAL_SIZE
+    	ld de, wCardPalette
+    	ld b, 5 palettes
+.copy_pal_loop
+   	ld a, [de]
+   	inc de
+    	ld [hli], a
+    	dec b
+    	jr nz, .copy_pal_loop
+    	ret
+
+SetNonColorizedCardPalette:
+    	ld hl, wCardAttrMap
+    	ld b, $30
+    	ld a, 0 ; palette 0
 .loop_set_attr_pal
-	ld a, [de]
-	add c
-	ld [de], a
-	inc de
-	dec b
-	jr nz, .loop_set_attr_pal
-	ret
+    	ld [hli], a
+    	dec b
+    	jr nz, .loop_set_attr_pal
+    	ret
 
 ; given the 8x6 card image with coordinates at de
 ; using the rectangle card attributes in wCardAttrMap
@@ -4349,7 +4393,8 @@ DrawLargePictureOfCard:
 	call LoadCardTypeHeaderTiles
 	ld de, v0Tiles1 + $20 tiles
 	call LoadLoaded1CardGfx
-	call SetBGP5ToCardPalette
+;	call SetBGP5ToCardPalette		; 5pal mod, BGP
+	call SetColorizedCardPalette
 	call FlushAllPalettes
 	ld hl, LargeCardTileData
 	call WriteDataBlocksToBGMap0

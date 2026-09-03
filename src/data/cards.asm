@@ -3764,7 +3764,7 @@ GoldeenCard:
 	tx HornAttackName ; name
 	dw NONE ; description
 	dw NONE ; description (cont)
-	db 10 ; damage
+	db 100 ; damage
 	db DAMAGE_NORMAL ; category
 	dw NONE ; effect commands
 	db NONE ; flags 1

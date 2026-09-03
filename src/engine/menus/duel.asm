@@ -589,7 +589,9 @@ DrawYourOrOppPlayArea_ActiveCardGfx:
 .draw
 	ld de, v0Tiles1 + $20 tiles ; destination offset of loaded gfx
 	call LoadLoaded1CardGfx
-	bank1call SetBGP2ToCardPalette
+;	bank1call SetBGP2ToCardPalette		; 5pal mod, BGP
+;	bank1call SetColorPalette_Player
+	bank1call SetNonColorizedCardPalette
 	bank1call FlushAllPalettes
 	pop de
 
@@ -626,7 +628,9 @@ DrawInPlayArea_ActiveCardGfx:
 	call LoadCardDataToBuffer1_FromDeckIndex
 	lb de, $8a, $00
 	call LoadLoaded1CardGfx
-	bank1call SetBGP2ToCardPalette
+;	bank1call SetBGP2ToCardPalette		; 5pal mod, BGP
+;	bank1call SetColorPalette_Player
+	bank1call SetNonColorizedCardPalette
 ; draw player arena card
 	ld a, $a0
 	lb de, 6, 9
@@ -652,7 +656,8 @@ DrawInPlayArea_ActiveCardGfx:
 	call LoadCardDataToBuffer1_FromDeckIndex
 	lb de, $95, $00
 	call LoadLoaded1CardGfx
-	bank1call SetBGP5ToCardPalette
+;	bank1call SetBGP5ToCardPalette		; 5pal mod, BGP
+	bank1call SetColorPalette_Player
 	ld a, $50
 	lb de, 6, 2
 	lb hl, 6, 1

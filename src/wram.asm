@@ -1215,7 +1215,8 @@ wEffectFunctionsBank:: ; ce22
 
 ; LoadLoaded1CardGfx loads the card's palette here
 wCardPalette:: ; ce23
-	ds 3 palettes
+;	ds 3 palettes
+	ds 5 palettes ; 5pal mod
 wCardAttrMap::
 	ds $30
 

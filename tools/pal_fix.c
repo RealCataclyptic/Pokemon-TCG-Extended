@@ -23,24 +23,24 @@ int main(int argc, char *argv[])
 
     int size;
     uint8_t *inbuffer = read_u8(argv[1], &size);
-    if (size == 0x18)
+    if (size == 0x28)
     {
         // nothing to do
         free(inbuffer);
         return EXIT_SUCCESS;
     }
-    else if (size > 0x18)
+    else if (size > 0x28)
     {
         fprintf(stderr, "Input palette file %s has invalid size 0x%x\n", argv[1], size);
         free(inbuffer);
         return EXIT_FAILURE;
     }
 
-    uint8_t *outbuffer = malloc(0x18); // 3 palettes
+    uint8_t *outbuffer = malloc(0x28); // 3 palettes
     memcpy(outbuffer, inbuffer, size);
     // pad the rest with 0x00 (black)
-    memset(outbuffer + size, 0x00, 0x18 - size);
-    write_u8(argv[1], outbuffer, 0x18);
+    memset(outbuffer + size, 0x00, 0x28 - size);
+    write_u8(argv[1], outbuffer, 0x28);
 
     free(inbuffer);
     free(outbuffer);
